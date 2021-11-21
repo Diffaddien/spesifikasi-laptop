@@ -4,7 +4,7 @@
 
 - [Diffa Addien Aziz](https://diffa.my.id)
 - Fikri Aslam Taufiqurahman
-- Hendri Kurniawan
+- Hendri Kurniawan (1957051007)
 - Nanda Bagus Pratama
 
 ## Dibuat dengan framework
