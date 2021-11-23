@@ -7,7 +7,7 @@ class Home extends BaseController
     public function index()
     {
         $data = [
-            'title' => "Blog - Home"
+            'title' => "SpekLaptop"
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar');

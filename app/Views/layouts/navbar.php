@@ -1,53 +1,30 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">Blog App</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link <?= \Config\Services::request()->uri->getSegment(1) == '' ? 'active' : '' ?>" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <?= \Config\Services::request()->uri->getSegment(1) == 'about' ? 'active' : '' ?>" href="about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <?= \Config\Services::request()->uri->getSegment(1) == 'post' ? 'active' : '' ?>" href="post">Post</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav> -->
+<!-- 
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link <?= \Config\Services::request()->uri->getSegment(1) == '' ? 'active' : '' ?>" aria-current="page" href="/">Home</a>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link <?= \Config\Services::request()->uri->getSegment(1) == 'about' ? 'active' : '' ?>" href="about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link <?= \Config\Services::request()->uri->getSegment(1) == 'post' ? 'active' : '' ?>" href="post">Post</a>
+    </li>
+  </ul>
+</div> -->
 
 <!-- header -->
-<nav>
-  <ul class="menu">
-    <li class="logo"><a href="#">Creative Mind Agency</a></li>
-    <li class="item"><a href="#">Home</a></li>
-    <li class="item"><a href="#">About</a></li>
-    <li class="item has-submenu">
-      <a tabindex="0">Services</a>
-      <ul class="submenu">
-        <li class="subitem"><a href="#">Design</a></li>
-        <li class="subitem"><a href="#">Development</a></li>
-        <li class="subitem"><a href="#">SEO</a></li>
-        <li class="subitem"><a href="#">Copywriting</a></li>
-      </ul>
-    </li>
-    <li class="item has-submenu">
-      <a tabindex="0">Plans</a>
-      <ul class="submenu">
-        <li class="subitem"><a href="#">Freelancer</a></li>
-        <li class="subitem"><a href="#">Startup</a></li>
-        <li class="subitem"><a href="#">Enterprise</a></li>
-      </ul>
-    </li>
-    <li class="item"><a href="#">Blog</a></li>
-    <li class="item"><a href="#">Contact</a>
-    </li>
-    <li class="item button"><a href="#">Log In</a></li>
-    <li class="item button secondary"><a href="#">Sign Up</a></li>
-    <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-  </ul>
-</nav>
+<header>
+      <nav class="main-nav">
+        <input type="checkbox" id="check" />
+        <label for="check" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <a href="/" class="logo">SpekLaptop</a>
+        <ul class="navlinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#" class="contact">Admin</a></li>
+        </ul>
+      </nav>
+    </header>

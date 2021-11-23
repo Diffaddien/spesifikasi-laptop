@@ -1,228 +1,194 @@
 /* reset css */ 
-* {margin:0; padding:0;box-sizing: border-box;}
+* {margin:0; padding:0; box-sizing: border-box;}
 li {list-style: none;}
 a {text-decoration: none;}
-	 
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+@font-face {
+  font-family: AstroSpace;
+  src: url(/fonts/AstroSpace.ttf);
+}
+
 body {
-    background-color:#fff;
-    font-family:Arial, Helvetica, sans-serif;
-    color:#000;
+  background-color:#fff;
+  font-family: "Montserrat", sans-serif;
+  color:#000;
 }
 .container {
-    width: 100%;
-    min-height: 100%;
-    background-color: #fcfcfc;
-    overflow: hidden;
-    }
+  width: 100%;
+  min-height: 100%;
+  background-color: #fcfcfc;
+  overflow: hidden;
+}
 /* .container h1 {font-size: 4vw;} */
 
 footer {
-    position: fixed;
-    bottom: 0; right: 0;
-    text-align: center;
-    background-color: rgba(38, 116, 242, 0.3);
-    padding:10px;
-    display: inline-table;
-    border-radius: 15px 0px 0px 0px;
+  font-weight: bold;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  float: center!important;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+  padding:10px;
+  margin-top: 5px; margin-bottom: 10px;
+  border-radius: 15px 0px 0px 0px;
 }
 footer a{color: black;}
 
 #wrapper {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 15px; margin-bottom: 35px;
-    float: center!important;
-    text-align: left;
-    border-radius:3px;
-    box-shadow: 0px 0px 4px #aaa;
-    background-color: #fff;
-    overflow: hidden
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15px; margin-bottom: 20px;
+  float: center!important;
+  text-align: left;
+  border-radius:3px;
+  box-shadow: 0px 0px 4px #aaa;
+  background-color: #fff;
+  overflow: hidden
 }
-.content {position: relative; padding: 5px;}
+.brand {
+  position: relative;
+  border: 1px dotted gray;
+  padding: 10px;
+}
+.rekayasaB {
+  margin: 2px;
+  border: 1px solid gray;
+  padding: 5px;
+}
      
 .data {
-    padding: 20px 15px;
-    width: 100%;
-    border-style: none;
-    background: #B6FAFA;
-    position: relative;
+  padding: 20px 15px;
+  width: 100%;
+  border-style: none;
+  background: #B6FAFA;
+  position: relative;
 }
 .data hr {border: 0;border-top: 1px dashed rgba(0,0,0,0.3);}
 .infos {
-    position: relative;
-    font-weight: 300; font-family: 'Nunito' ,sans-serif;  font-size: 14px;line-height: 29px;    padding: 0px 0px;    transform: none!important;  overflow: hidden; text-overflow: clip;  white-space: nowrap;
+  position: relative;
+  font-weight: 300; font-family: 'Nunito' ,sans-serif;  font-size: 14px;line-height: 29px;    padding: 0px 0px;    transform: none!important;  overflow: hidden; text-overflow: clip;  white-space: nowrap;
 }
 .infos b{font-size: 15;display: block;float: left;width: 35%;}
  
-/* Menu Navigasi */
-/* Basic styling */
-nav {
-  background: #222;
-  padding: 0 15px;
+/* Menu Navigasi -------- */
+header {
+  background-color: #141b25;
 }
-a {
+
+.main-nav {
+  height: 90px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.logo {
+  color: white;
+  line-height: 90px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 30px;
+  font-family: "AstroSpace", sans-serif;
+}
+
+.navlinks {
+  list-style: none;
+  float: right;
+  line-height: 90px;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks li {
+  display: inline-block;
+  margin: 0px 20px;
+}
+
+.navlinks li a {
   color: white;
   text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s linear 0s;
+  text-transform: uppercase;
 }
-.menu,
-.submenu {
-  list-style-type: none;
+
+.navlinks li a:hover {
+  color: #7ebcb9;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #7ebcb9;
 }
-.logo {
-  font-size: 20px;
-  padding: 7.5px 10px 7.5px 0;
+
+li a.contact {
+  background-color: #00adb5;
+  padding: 9px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+  border-bottom: none;
 }
-.item {
-  padding: 10px;
-}
-.item.button {
-  padding: 9px 5px;
-}
-.item:not(.button) a:hover,
-.item a:hover::after {
-  color: #ccc;
-}
-/* Mobile menu */
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.menu li a {
-  display: block;
-  padding: 15px 5px;
-}
-.menu li.subitem a {
-  padding: 15px;
-}
-.toggle {
-  order: 1;
-  font-size: 20px;
-}
-.item.button {
-  order: 2;
-}
-.item {
-  order: 3;
-  width: 100%;
-  text-align: center;
-  display: none;
-}
-.active .item {
-  display: block;
-}
-.button.secondary {
-  /* divider between buttons and menu links */
-  border-bottom: 1px #444 solid;
-}
-/* Submenu up from mobile screens */
-.submenu {
-  display: none;
-}
-.submenu-active .submenu {
-  display: block;
-}
-.has-submenu i {
-  font-size: 12px;
-}
-.has-submenu > a::after {
-  font-family: "Font Awesome 5 Free";
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 900;
-  content: "\f078";
+
+li a.contact:hover {
+  background-color: #047e85;
   color: white;
-  padding-left: 5px;
-}
-.subitem a {
-  padding: 10px 15px;
-}
-.submenu-active {
-  background-color: #111;
-  border-radius: 3px;
+  border-bottom: none;
 }
 
-/* Tablet menu */
-@media all and (min-width: 700px) {
-  .menu {
-    justify-content: center;
-  }
-  .logo {
-    flex: 1;
-  }
-  .item.button {
-    width: auto;
-    order: 1;
-    display: block;
-  }
-  .toggle {
-    flex: 1;
-    text-align: right;
-    order: 2;
-  }
-  /* Button up from tablet screen */
-  .menu li.button a {
-    padding: 10px 15px;
-    margin: 5px 0;
-  }
-  .button a {
-    background: #0080ff;
-    border: 1px royalblue solid;
-  }
-  .button.secondary {
-    border: 0;
-  }
-  .button.secondary a {
-    background: transparent;
-    border: 1px #0080ff solid;
-  }
-  .button a:hover {
-    text-decoration: none;
-  }
-  .button:not(.secondary) a:hover {
-    background: royalblue;
-    border-color: darkblue;
-  }
-}
-/* Desktop menu */
-@media all and (min-width: 960px) {
-  .menu {
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    background: none;
-  }
-  .logo {
-    order: 0;
-  }
-  .item {
-    order: 1;
-    position: relative;
-    display: block;
-    width: auto;
-  }
-  .button {
-    order: 2;
-  }
-  .submenu-active .submenu {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 68px;
-    background: #111;
-  }
-  .toggle {
-    display: none;
-  }
-  .submenu-active {
-    border-radius: 0;
-  }
+#check {
+  display: none;
 }
 
+.menu-btn {
+  font-size: 25px;
+  color: white;
+  float: right;
+  line-height: 90px;
+  margin-right: 40px;
+  display: none;
+  cursor: pointer;
+}
+/* -----------------------*/
 
+.layout-card {
+	padding: 0;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	margin: 5px 15px;
+	gap:20px;
+	position: relative;
+}
+.card {
+	width: 100%;
+	height: auto;
+	grid-column: span 2;
+	margin: 10px 0;
+	border-radius: 10px;
+	position: relative;
+	box-shadow: 0 10px 10px rgba(0,0,0,.1);
+}
+.head-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+.body-card {
+	padding: 10px 15px;
+}
+.body-card h1 {
+	margin: 0;	
 
-/* Pengaturan border-collapse jenis,ukuran serta warna huruf secara keseluruhan tabel */
+}
+.body-card svg {
+	width: 31px;
+	position: absolute;
+	bottom: 7px;
+	right: 20px;
+}
+
+/* border-collapse jenis, ukuran serta warna huruf secara keseluruhan tabel */
 table{
     width: 100%;
     border-collapse:collapse;
@@ -248,54 +214,68 @@ table tr {background:#F5FFFA;}
 /* Mengatur warna baris genap (akan menghasilkan warna selang seling pada baris tabel) */
 table tr:nth-child(even) {background:#F0F8FF;}
     
-@media screen and (max-width: 900px) {
-    .menunav ul{left:5%}
+@media screen and (max-width: 991px) {
+    
 }
     
-@media screen and (max-width:768px){
+@media screen and (max-width:767px){
     #wrapper {width: 95%;}
-    header {padding-left: 0px}
 
-    .menu {
-        width: 100%;
-        height: auto;
+    .navlinks {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      transition: all 0.5s;
+      right: -100%;
+      background: #222831;
     }
-    .menu ul {
-        display: block;
-        max-height: 0;
-    	overflow: hidden;
-    	-webkit-transition: max-height 0.3s;
-    	-moz-transition: max-height 0.3s;
-        -ms-transition: max-height 0.3s;
-        -o-transition: max-height 0.3s;
-    	transition: max-height 0.3s;
-        /*Para fazer com que o menu saia da esquerda, você deve trocar max-height por max-width*/
-        /*Untuk membuat menu keluar dari kanan, Anda harus mengubah max-height menjadi max-width dan mengatur float: right*/    }
-    .menu ul a {
-        text-align: left;
-        width: 100%;
-        height: 50px;
-        background-color: #f1c40f;
-        padding: 10px 0px 10px 5%;
+  
+    .navlinks li {
+      display: block;
     }
-    .menu-icon {
-        width: 100px;
-        height: inherit;
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        line-height: 60px;
+  
+    .navlinks li a {
+      font-size: 20px;
     }
-    #menuToggle:checked ~ ul {
-        max-height: 350px;
-        /*Untuk membuat menu keluar dari kiri atau kanan, Anda harus mengubah max-height menjadi max-width*/
+  
+    .navlinks li a:hover {
+      border-bottom: none;
     }
-    .menu-icon i {
-        font-size: 1.7em;
+  
+    .menu-btn {
+      display: block;
     }
+  
+    #check:checked ~ .navlinks {
+      right: 0;
+    }
+
+    /* ----- */
+    
+    .card {
+      width: 100%;
+      grid-column: span 3;
+    
 }
 
-@media screen and (max-width: 468px) {
+@media screen and (max-width: 479px) {
     .wrapper {width: 98%}
+
+    .logo {
+      margin-left: 10px;
+      font-size: 25px;
+    }
+    .menu-btn {
+      margin-right: 10px;
+      font-size: 25px;
+    }
+    .menu-btn:focus {
+      color: blue;
+    }
+
+    .card {
+      width: 100%;
+      grid-column: span 6;
+
 }
