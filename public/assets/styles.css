@@ -53,19 +53,23 @@ footer a{color: black;}
 .brand {
   position: relative;
   padding: 10px;
+  margin-bottom: 30px;
   border-bottom: 2px solid rgb(0, 0, 0);
+  word-wrap: normal;
+  white-space: nowrap;
+  word-break: normal;
+  overflow: auto;
+
 }
 .rekayasaB {
   text-align: center;
   width: 150px;
   height: 75px;
-  margin: 5px 12px;
+  margin: 10px 12px;
   border-radius: 2px;
   box-shadow: 1px 1px 5px gray;
   padding: 5px;
-  white-space:pre;
-  word-break:normal;
-  word-wrap:break-word;
+  
 }
 .rekayasaB img{float: center;}
      

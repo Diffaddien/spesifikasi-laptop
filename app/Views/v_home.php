@@ -6,9 +6,9 @@
         <img class="rekayasaB" src="/assets/images/asus_logo.jpg"></img>
         <img class="rekayasaB" style="width: 200px !important; padding:0px !important" src="/assets/images/lenovo_logo.jpg"></img>
         <img class="rekayasaB" style="width: 190px !important; padding:0px !important" src="/assets/images/xiaomi_logo.jpg"></img>
-</center></div><br/>
-    <center><b>Telusuri Laptop</b></center><br/>
-	
+    </center></div><br/>
+    <center><h3>Telusuri Laptop</h3></center><br/>
+
     <div class="layout-card">
 	<?php $i=1; foreach ($laptop as $r):?>  
 	<div class="card">
