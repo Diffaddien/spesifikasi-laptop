@@ -63,12 +63,11 @@ footer a{color: black;}
 }
 .rekayasaB {
   text-align: center;
-  width: 150px;
+  width: 160px;
   height: 75px;
   margin: 10px 12px;
   border-radius: 2px;
   box-shadow: 1px 1px 5px gray;
-  padding: 5px;
   
 }
 .rekayasaB img{float: center;}
