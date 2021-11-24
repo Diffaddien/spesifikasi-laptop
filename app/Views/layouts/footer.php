@@ -1,5 +1,5 @@
 <footer>
-Copyright 2021 &copy; Kelompok SpekLaptop
+Copyright 2021 &copy; Kelompok SPEKLAPTOP
 </footer>
 
 </body>

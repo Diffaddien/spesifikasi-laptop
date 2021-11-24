@@ -20,11 +20,11 @@
         <label for="check" class="menu-btn">
           <i class="fas fa-bars"></i>
         </label>
-        <a href="/" class="logo">SpekLaptop</a>
+        <a href="/" class="logo">SPEKLAPTOP</a>
         <ul class="navlinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#" class="contact">Admin</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/admin" class="contact">Admin</a></li>
         </ul>
       </nav>
     </header>

@@ -32,6 +32,24 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/about', function (){
+    $data = [
+        'title' => "About"
+    ];
+    echo view('layouts/header', $data);
+    echo view('layouts/navbar');
+    echo view('v_about');
+    echo view('layouts/footer'); 
+});
+$routes->get('/admin', function (){
+    $data = [
+        'title' => "Admin"
+    ];
+    echo view('layouts/header', $data);
+    echo view('layouts/navbar');
+    echo view('v_admin');
+    echo view('layouts/footer'); 
+});
 
 
 

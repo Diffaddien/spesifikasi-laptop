@@ -40,6 +40,7 @@ footer a{color: black;}
 #wrapper {
   position: relative;
   width: 80%;
+  min-height: 80% !important;
   margin: 0 auto;
   margin-top: 15px; margin-bottom: 20px;
   float: center!important;
@@ -220,6 +221,7 @@ table tr:nth-child(even) {background:#F0F8FF;}
     
 @media screen and (max-width:767px){
     #wrapper {width: 95%;}
+    .main-nav {padding-left: 2%; padding-right: 2%;}
 
     .navlinks {
       position: fixed;
@@ -259,8 +261,9 @@ table tr:nth-child(even) {background:#F0F8FF;}
     
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
     .wrapper {width: 98%}
+    .main-nav {padding-left: 1%; padding-right: 1%;}
 
     .logo {
       margin-left: 10px;
