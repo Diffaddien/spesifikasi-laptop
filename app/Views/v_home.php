@@ -1,12 +1,12 @@
 <div id="wrapper">
-    <h2><center> Pilih Brand Laptop</center></h2>
+    <br/><h2><center>Pilih Brand Laptop</center></h2>
 
-    <div class="brand">
-        <a class="rekayasaB">Acer</a>
-        <a class="rekayasaB">Asus</a>
-        <a class="rekayasaB">Lenovo</a>
-        <a class="rekayasaB">Xiaomi</a>
-    </div><br/>
+    <div class="brand"><center>
+        <img class="rekayasaB" src="/assets/images/acer.png" ></img>
+        <img class="rekayasaB" src="/assets/images/asus_logo.jpg"></img>
+        <img class="rekayasaB" style="width: 200px !important; padding:0px !important" src="/assets/images/lenovo_logo.jpg"></img>
+        <img class="rekayasaB" style="width: 190px !important; padding:0px !important" src="/assets/images/xiaomi_logo.jpg"></img>
+</center></div><br/>
     <center><b>Telusuri Laptop</b></center><br/>
 	
     <div class="layout-card">
