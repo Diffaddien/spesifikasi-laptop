@@ -4,16 +4,15 @@
     <div class="brand">
     
     <center>
-          
         <a href="merk/asus"><img class="rekayasaB" src="/assets/images/Asus_logo.jpg" ></img></a>
         <a href="merk/acer"><img class="rekayasaB" src="/assets/images/Acer_logo.jpg" ></img></a>
         <a href="merk/lenovo"><img class="rekayasaB" src="/assets/images/Lenovo_logo.jpg" ></img></a>
         <a href="merk/xiaomi"><img class="rekayasaB" src="/assets/images/Xiaomi_logo.jpg" ></img></a>
-        
-       </center>
+
+    </center>
      
     </div><br/>
-    <center><h3>Telusuri Laptop</h3></center><br/>
+    <center><h3>Daftar Laptop Asus</h3></center><br/>
 
     <div class="layout-card">
 	<?php $i=1; foreach ($laptop as $r):?>
