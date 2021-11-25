@@ -4,21 +4,18 @@
     <div class="brand">
     
     <center>
-          
-        <a href="merk/asus"><img class="rekayasaB" src="/assets/images/Asus_logo.jpg" ></img></a>
-        <a href="merk/acer"><img class="rekayasaB" src="/assets/images/Acer_logo.jpg" ></img></a>
-        <a href="merk/lenovo"><img class="rekayasaB" src="/assets/images/Lenovo_logo.jpg" ></img></a>
-        <a href="merk/xiaomi"><img class="rekayasaB" src="/assets/images/Xiaomi_logo.jpg" ></img></a>
-        
-       </center>
+    <?php foreach ($merek as $r):?>      
+        <a href="<?= base_url($r["nama_merek"])?>"><img class="rekayasaB" src="/assets/images/<?=$r["nama_merek"]?>_logo.jpg" ></img></a>
+    <?php endforeach;?>     
+    </center>
      
     </div><br/>
-    <center><h3>Telusuri Laptop</h3></center><br/>
+    <center><h3>Telusuri Laptop <?= $pilih; ?></h3></center><br/>
 
     <div class="layout-card">
-	<?php $i=1; foreach ($laptop as $r):?>
+	<?php foreach ($laptop as $r):?>
     
-    <?php if($r['merk'] == "Asus"): ?>
+    <?php if($r['merk'] == $pilih): ?>
 	<div class="card">
 	     <div class="head-card">
 		  <img src="/assets/images/<?=$r['gambar'];?>" alt="">
@@ -34,6 +31,23 @@
 	     </div>
 	</div>
     <?php endif ?>
+    <?php if($pilih == "all"): ?>
+	<div class="card">
+	     <div class="head-card">
+		  <img src="/assets/images/<?=$r['gambar'];?>" alt="">
+	     </div>
+	     <div class="body-card">
+		  <h1><?=$r['model'];?></h1>
+		  <p>
+            <b>Prosessor: </b><?=$r['processor'];?><br/>
+            <b>RAM: </b><?=$r['ram'];?><br/>
+            <b>Storage: </b><?=$r['disk'];?>
+          </p>
+		  <a href="#"><svg class="w-6 h-6" fill="none" stroke="#303030" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+	     </div>
+	</div>
+    <?php endif ?>
+
 	<?php endforeach;?> 
 	</div>
 	

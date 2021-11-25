@@ -33,6 +33,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'spesifikasi::index');
 $routes->get('/home', 'spesifikasi::index');
+$routes->get('/Acer', 'merk::acer');
+$routes->get('/Asus', 'merk::asus');
+$routes->get('/Lenovo', 'merk::lenovo');
+$routes->get('/Xiaomi', 'merk::xiaomi');
 
 $routes->get('/about', function (){
     $data = [
@@ -52,6 +56,7 @@ $routes->get('/admin', function (){
     echo view('v_admin');
     echo view('layouts/footer'); 
 });
+
 
 
 

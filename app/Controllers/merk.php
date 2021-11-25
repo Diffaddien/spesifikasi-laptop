@@ -16,57 +16,64 @@ class merk extends BaseController
     {   
         $laptop = $this->M_laptop->findAll();
         $merek =  $this->M_brand->findAll();
-        $data =[
+        $data = [
             'laptop' => $laptop,
             'merek' => $merek,
-            'title' => "laptop - asus"
+            'pilih' => "Asus",
+            'title' => "Laptop - Asus"
         ];
        
         echo view('layouts/header', $data);
         echo view('layouts/navbar');
-        echo view('merk_laptop/asus');
+        echo view('v_home', $data);
         echo view('layouts/footer');
     } 
     public function acer()
     {
         $laptop = $this->M_laptop->findAll();
         $merek =  $this->M_brand->findAll();
-        $data =[
+        $data = [
             'laptop' => $laptop,
             'merek' => $merek,
-            'title' => "laptop - acer"
+            'pilih' => "Acer",
+            'title' => "Laptop - Acer"
         ];
+       
         echo view('layouts/header', $data);
         echo view('layouts/navbar');
-        echo view('merk_laptop/acer');
+        echo view('v_home', $data);
         echo view('layouts/footer');
     }
     public function lenovo()
     {
         $laptop = $this->M_laptop->findAll();
         $merek =  $this->M_brand->findAll();
-        $data =[
+        $data = [
             'laptop' => $laptop,
             'merek' => $merek,
-            'title' => "laptop - lenovo"
+            'pilih' => "Lenovo",
+            'title' => "Laptop - Lenovo"
         ];
+       
         echo view('layouts/header', $data);
         echo view('layouts/navbar');
-        echo view('merk_laptop/lenovo');
+        echo view('v_home', $data);
         echo view('layouts/footer');
     }
     public function xiaomi()
     {
         $laptop = $this->M_laptop->findAll();
         $merek =  $this->M_brand->findAll();
-        $data =[
+        $data = [
             'laptop' => $laptop,
             'merek' => $merek,
-            'title' => "laptop - xiaomi"
+            'pilih' => "Xiaomi",
+            'title' => "Laptop - Xiaomi"
         ];
+       
         echo view('layouts/header', $data);
         echo view('layouts/navbar');
-        echo view('merk_laptop/xiaomi');
+        echo view('v_home', $data);
         echo view('layouts/footer');
     }
 }

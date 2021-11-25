@@ -12,18 +12,19 @@ class spesifikasi extends BaseController
         $this->M_brand = new M_brand();
     }
     public function index()
-    {
+    {   
         $laptop = $this->M_laptop->findAll();
-        $merek =  $this->M_brand->findAll();
+        $merek = $this->M_brand->findAll();
         $data =[
             'laptop' => $laptop,
             'merek' => $merek,
+            'pilih' => 'all',
             'title' => 'home'
         ];
         
         echo view('layouts/header', $data);
         echo view('layouts/navbar');
-        echo view('v_home',$data);
+        echo view('v_home', $data);
         echo view('layouts/footer');
 
     }
