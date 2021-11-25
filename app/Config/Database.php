@@ -23,7 +23,7 @@ class Database extends Config
      *
      * @var string
      */
-    public $defaultGroup = 'default';
+    public $defaultGroup = 'db_online';
 
     /**
      * The default database connection.
@@ -49,6 +49,25 @@ class Database extends Config
         'failover' => [],
         'port'     => 3306,
     ];
+    public $db_online = [
+        'DSN'      => '',
+        'hostname' => '198.23.57.166',
+        'username' => 'difazi_database',
+        'password' => 'Takuma12',
+        'database' => 'difazi_database',
+        'DBDriver' => 'MySQLi',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => (ENVIRONMENT !== 'production'),
+        'charset'  => 'utf8',
+        'DBCollat' => 'utf8_general_ci',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'     => 3306,
+    ];
 
     /**
      * This database connection is used when
@@ -58,20 +77,20 @@ class Database extends Config
      */
     public $tests = [
         'DSN'      => '',
-        'hostname' => '127.0.0.1',
+        'hostname' => '103.112.244.90',
         'username' => '',
         'password' => '',
         'database' => ':memory:',
         'DBDriver' => 'SQLite3',
         'DBPrefix' => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
-        'pConnect' => false,
+        'pConnect' => true,
         'DBDebug'  => (ENVIRONMENT !== 'production'),
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
         'swapPre'  => '',
         'encrypt'  => false,
-        'compress' => false,
-        'strictOn' => false,
+        'compress' => true,
+        'strictOn' => true,
         'failover' => [],
         'port'     => 3306,
     ];
