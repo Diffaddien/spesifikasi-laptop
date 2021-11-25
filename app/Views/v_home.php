@@ -4,8 +4,8 @@
     <div class="brand">
     
     <center>
-    <?php foreach ($merek as $r):?>      
-        <a href="<?= base_url($r["nama_merek"])?>"><img class="rekayasaB" src="/assets/images/<?=$r["nama_merek"]?>_logo.jpg" ></img></a>
+    <?php foreach ($brand as $r):?>      
+        <a href="<?= base_url($r["nama_brand"])?>"><img class="rekayasaB" src="/assets/images/logo/<?=$r["nama_brand"]?>_logo.jpg" ></img></a>
     <?php endforeach;?>     
     </center>
      
@@ -15,10 +15,10 @@
     <div class="layout-card">
 	<?php foreach ($laptop as $r):?>
     
-    <?php if($r['merk'] == $pilih): ?>
+    <?php if($r['brand'] == $pilih): ?>
 	<div class="card">
 	     <div class="head-card">
-		  <img src="/assets/images/<?=$r['gambar'];?>" alt="">
+		  <img src="/assets/images/laptop/<?=$r['gambar'];?>" alt="">
 	     </div>
 	     <div class="body-card">
 		  <h1><?=$r['model'];?></h1>
@@ -34,7 +34,7 @@
     <?php if($pilih == "all"): ?>
 	<div class="card">
 	     <div class="head-card">
-		  <img src="/assets/images/<?=$r['gambar'];?>" alt="">
+		  <img src="/assets/images/laptop/<?=$r['gambar'];?>" alt="">
 	     </div>
 	     <div class="body-card">
 		  <h1><?=$r['model'];?></h1>

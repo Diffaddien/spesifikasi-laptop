@@ -11,6 +11,9 @@
 
 Web ini dibangun dengan menggunakann framwork CodeIgniter 4.1.5
 
+## Database URL
+[https://cp.freehostia.com/mysql/phpmyadmin/?db=difazi_database](https://cp.freehostia.com/mysql/phpmyadmin/?db=difazi_database)
+
 ## Repository Management
 
 We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.

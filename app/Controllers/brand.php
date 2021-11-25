@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\M_laptop;
 use App\Models\M_brand;
-class merk extends BaseController
+class brand extends BaseController
 {   
 
     protected $M_laptop, $M_brand;
@@ -15,10 +15,10 @@ class merk extends BaseController
     public function asus()
     {   
         $laptop = $this->M_laptop->findAll();
-        $merek =  $this->M_brand->findAll();
+        $brand =  $this->M_brand->findAll();
         $data = [
             'laptop' => $laptop,
-            'merek' => $merek,
+            'brand' => $brand,
             'pilih' => "Asus",
             'title' => "Laptop - Asus"
         ];
@@ -31,10 +31,10 @@ class merk extends BaseController
     public function acer()
     {
         $laptop = $this->M_laptop->findAll();
-        $merek =  $this->M_brand->findAll();
+        $brand =  $this->M_brand->findAll();
         $data = [
             'laptop' => $laptop,
-            'merek' => $merek,
+            'brand' => $brand,
             'pilih' => "Acer",
             'title' => "Laptop - Acer"
         ];
@@ -47,10 +47,10 @@ class merk extends BaseController
     public function lenovo()
     {
         $laptop = $this->M_laptop->findAll();
-        $merek =  $this->M_brand->findAll();
+        $brand =  $this->M_brand->findAll();
         $data = [
             'laptop' => $laptop,
-            'merek' => $merek,
+            'brand' => $brand,
             'pilih' => "Lenovo",
             'title' => "Laptop - Lenovo"
         ];
@@ -63,10 +63,10 @@ class merk extends BaseController
     public function xiaomi()
     {
         $laptop = $this->M_laptop->findAll();
-        $merek =  $this->M_brand->findAll();
+        $brand =  $this->M_brand->findAll();
         $data = [
             'laptop' => $laptop,
-            'merek' => $merek,
+            'brand' => $brand,
             'pilih' => "Xiaomi",
             'title' => "Laptop - Xiaomi"
         ];

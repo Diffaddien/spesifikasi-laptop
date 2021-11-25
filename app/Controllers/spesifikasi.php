@@ -14,10 +14,10 @@ class spesifikasi extends BaseController
     public function index()
     {   
         $laptop = $this->M_laptop->findAll();
-        $merek = $this->M_brand->findAll();
+        $brand = $this->M_brand->findAll();
         $data =[
             'laptop' => $laptop,
-            'merek' => $merek,
+            'brand' => $brand,
             'pilih' => 'all',
             'title' => 'home'
         ];

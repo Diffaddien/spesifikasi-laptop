@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class M_brand extends Model
 {
     
-    protected $table                = 'merek_laptop';
-    protected $primaryKey           = 'nama_merek';
+    protected $table                = 'brand_laptop';
+    protected $primaryKey           = 'nama_brand';
 
     // Dates
     protected $useTimestamps        = true;

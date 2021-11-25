@@ -33,10 +33,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'spesifikasi::index');
 $routes->get('/home', 'spesifikasi::index');
-$routes->get('/Acer', 'merk::acer');
-$routes->get('/Asus', 'merk::asus');
-$routes->get('/Lenovo', 'merk::lenovo');
-$routes->get('/Xiaomi', 'merk::xiaomi');
+$routes->get('/Acer', 'brand::acer');
+$routes->get('/Asus', 'brand::asus');
+$routes->get('/Lenovo', 'brand::lenovo');
+$routes->get('/Xiaomi', 'brand::xiaomi');
 
 $routes->get('/about', function (){
     $data = [
