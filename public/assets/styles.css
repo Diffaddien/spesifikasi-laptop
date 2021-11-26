@@ -1,5 +1,8 @@
 /* reset css */ 
-* {margin:0; padding:0; box-sizing: border-box;}
+* {
+  margin:0; padding:0; box-sizing: border-box; 
+  scrollbar-width: thin; scrollbar-color: rgb(0, 0, 0)   rgba(0, 0, 0, 0.192);
+}
 li {list-style: none;}
 a {text-decoration: none;}
 
@@ -55,48 +58,94 @@ footer a{color: black;}
   padding: 10px;
   margin-bottom: 30px;
   border-bottom: 2px solid rgb(0, 0, 0);
+  border-radius: 3px;
   word-wrap: normal;
   white-space: nowrap;
   word-break: normal;
   overflow: auto;
 
 }
+
 .rekayasaB {
   text-align: center;
   width: 150px;
   height: 60px;
   margin: 10px 12px;
   border-radius: 3px;
-  box-shadow: 0px 0px 5px rgba(26, 26, 26, 0.164);
-  
+  box-shadow: 0px 0px 5px rgba(26, 26, 26, 0.164); 
 }
-.rekayasaB img{float: center;}
-     
-.data {
-  padding: 20px 15px;
-  width: 100%;
-  border-style: none;
-  background: #B6FAFA;
-  position: relative;
-}
-.data hr {border: 0;border-top: 1px dashed rgba(0,0,0,0.3);}
-.infos {
-  position: relative;
-  font-weight: 300; font-family: 'Nunito' ,sans-serif;  font-size: 14px;line-height: 29px;    padding: 0px 0px;    transform: none!important;  overflow: hidden; text-overflow: clip;  white-space: nowrap;
-}
-.infos b{font-size: 15;display: block;float: left;width: 35%;}
- 
-/* Menu Navigasi -------- */
-header {
-  background-color: #141b25;
+.b_active { border: 3px solid dodgerblue; }
+.rekayasaB:hover { border: 3px solid dodgerblue;}
+
+.tooltip {
+  color: rgb(255, 255, 255);
 }
 
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  content: '';
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.tooltip:before {
+  visibility: hidden;
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color: rgb(255, 0, 43) transparent transparent transparent;
+  top: -15px;
+  bottom: -15px;
+   transform: translateY(20px);
+}
+.tooltip:after {
+  visibility: hidden;
+  content: attr(data-tooltip);
+  background: rgb(255, 0, 43);
+  width: 90%;
+  height: 30px;
+  font-size: 13px;
+  font-weight: 300;
+  top: -65px;
+  left: 0px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transform: translateY(20px);
+}
+.tooltip:hover::before,
+.tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.anim:hover {
+  animation: shake 500ms ease-in-out forwards;}
+  
+.rekayasaB img{ float: center; }
+
+/* Scroll Bar Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: rgba(122, 122, 122, 0.692);
+  border-radius: 3px;;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+    
+ 
+/* Menu Navigasi -------- */
+header {background-color: #141b25;}
 .main-nav {
   height: 90px;
   padding-left: 10%;
   padding-right: 10%;
 }
-
 .logo {
   color: white;
   line-height: 90px;
@@ -106,7 +155,6 @@ header {
   margin-left: 30px;
   font-family: "AstroSpace", sans-serif;
 }
-
 .navlinks {
   list-style: none;
   float: right;
@@ -114,12 +162,10 @@ header {
   margin: 0;
   padding: 0;
 }
-
 .navlinks li {
   display: inline-block;
   margin: 0px 20px;
 }
-
 .navlinks li a {
   color: white;
   text-decoration: none;
@@ -127,31 +173,23 @@ header {
   transition: all 0.3s linear 0s;
   text-transform: uppercase;
 }
-
 .navlinks li a:hover {
   color: #7ebcb9;
   padding-bottom: 7px;
   border-bottom: 2px solid #7ebcb9;
 }
-
-li a.contact {
+.navlinks li .active {
   background-color: #00adb5;
-  padding: 9px 20px;
-  border-radius: 50px;
-  transition: all 0.3s ease 0s;
-  border-bottom: none;
-}
-
-li a.contact:hover {
-  background-color: #047e85;
   color: white;
+  padding: 9px 20px !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease 0s;
   border-bottom: none;
 }
 
 #check {
   display: none;
 }
-
 .menu-btn {
   font-size: 25px;
   color: white;
@@ -223,56 +261,56 @@ table th, table td {
 }
 /* Mengatur warna baris */
 table tr {background:#F5FFFA;}
-/* Mengatur warna baris genap (akan menghasilkan warna selang seling pada baris tabel) */
+/* Mengatur warna baris genap (akan menghasilkan warna selang seling) */
 table tr:nth-child(even) {background:#F0F8FF;}
-    
+
+/* Method Animasi */
+@keyframes shake {
+  0% { transform: rotate(2deg); }
+  50% { transform: rotate(-3deg) }
+  70% { transform: rotate(3deg) }
+  100% { transform: rotate(0deg)}
+}
+
+/* Responsive Media Screen */
 @media screen and (max-width: 991px) {
     
-}
-    
+}  
 @media screen and (max-width:767px){
-    #wrapper {width: 95%;}
-    .main-nav {padding-left: 2%; padding-right: 2%;}
-
-    .navlinks {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      text-align: center;
-      transition: all 0.5s;
-      right: -100%;
-      background: #222831;
+  #wrapper {width: 95%;}
+  .main-nav {padding-left: 2%; padding-right: 2%;}
+  .navlinks {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: all 0.5s;
+    right: -100%;
+    background: #222831;
+    z-index: 5;
     }
-  
-    .navlinks li {
-      display: block;
-    }
-  
-    .navlinks li a {
+  .navlinks li {
+    display: block;
+  }
+  .navlinks li a {
       font-size: 20px;
-    }
-  
-    .navlinks li a:hover {
+  }
+  .navlinks li a:hover {
       border-bottom: none;
-    }
-  
-    .menu-btn {
+  }
+  .menu-btn {
       display: block;
-    }
-  
-    #check:checked ~ .navlinks {
+  }
+  #check:checked ~ .navlinks {
       right: 0;
-    }
+  }
 
-    /* ----- */
-    
-    .card {
+  /* ----- */
+  .card {
       width: 100%;
       grid-column: span 3;
-    }
-    
+  }
 }
-
 @media screen and (max-width: 480px) {
     .wrapper {width: 98%}
     .main-nav {padding-left: 1%; padding-right: 1%;}
