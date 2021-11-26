@@ -29,7 +29,7 @@ class Login extends BaseController
                     'admin_password' => $dataAdmin['admin_password'],
                 ];
                 session()->set($dataSesi);
-                return redirect()->to('spesifikasi');
+                return redirect()->to('admin');
             }
             if ($err) {
                 session()->setFlashdata('admin_username', $admin_username);
@@ -38,5 +38,10 @@ class Login extends BaseController
             }
         }
         return view('login_view');
+    }
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('');
     }
 }

@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\M_laptop;
 use App\Models\M_brand;
+
 class spesifikasi extends BaseController
-{   
+{
     protected $M_laptop, $M_brand;
     public function __construct()
     {
@@ -12,20 +14,29 @@ class spesifikasi extends BaseController
         $this->M_brand = new M_brand();
     }
     public function index()
-    {   
+    {
         $laptop = $this->M_laptop->findAll();
         $brand = $this->M_brand->findAll();
-        $data =[
+        $data = [
             'laptop' => $laptop,
             'brand' => $brand,
             'pilih' => 'all',
             'title' => 'home'
         ];
-        
+
         echo view('layouts/header', $data);
         echo view('layouts/navbar');
         echo view('v_home', $data);
         echo view('layouts/footer');
-
+    }
+    function admin()
+    {
+        $data = [
+            'title' => "Admin"
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar');
+        echo view('v_admin');
+        echo view('layouts/footer');
     }
 }

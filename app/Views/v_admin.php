@@ -1,3 +1,4 @@
 <div id="wrapper">
-ini adalah halaman Admin
+    <button><a href="/logout">Logout</a></button>
+    ini adalah halaman Admin
 </div>
