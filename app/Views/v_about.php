@@ -1,3 +1,3 @@
-<div id="wrapper">
+<div class="container">
 ini adalah halaman About
 </div>

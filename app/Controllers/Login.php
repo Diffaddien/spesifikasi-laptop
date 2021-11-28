@@ -18,9 +18,13 @@ class Login extends BaseController
             }
             if (empty($err)) {
                 $dataAdmin = $ModelAdmin->where("admin_username", $admin_username)->first();
-                if ($dataAdmin['admin_password'] != md5($admin_password)) {
-                    $err = "Password salah";
+                if ($dataAdmin == '') {
+                    $err = "Username salah";
                 }
+                else {
+                    if ($dataAdmin['admin_password'] != md5($admin_password)) {
+                    $err = "Password salah"; }
+                } 
             }
             if (empty($err)) {
                 $dataSesi = [
@@ -29,19 +33,26 @@ class Login extends BaseController
                     'admin_password' => $dataAdmin['admin_password'],
                 ];
                 session()->set($dataSesi);
-                return redirect()->to('admin');
+                return redirect()->to(base_url('admin'));
             }
             if ($err) {
                 session()->setFlashdata('admin_username', $admin_username);
                 session()->setFlashdata('error', $err);
-                return redirect()->to("login");
+                return redirect()->to(base_url('login'));
             }
         }
-        return view('login_view');
+        
+        $data = [
+            'title' => 'home'
+        ];
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar');
+        echo view('login_view');
+        echo view('layouts/footer');
     }
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('');
+        return redirect()->to(base_url());
     }
 }

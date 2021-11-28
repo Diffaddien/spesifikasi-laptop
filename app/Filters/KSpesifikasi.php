@@ -12,7 +12,7 @@ class KSpesifikasi implements FilterInterface
     {
         // Do something here
         if (!session()->get('admin_id')) {
-            return redirect()->to('/login');
+            return redirect()->to(base_url('login'));
         }
     }
 

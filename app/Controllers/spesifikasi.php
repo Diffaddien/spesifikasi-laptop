@@ -21,7 +21,7 @@ class spesifikasi extends BaseController
             'laptop' => $laptop,
             'brand' => $brand,
             'pilih' => 'all',
-            'title' => 'home'
+            'title' => 'Home'
         ];
 
         echo view('layouts/header', $data);
@@ -29,14 +29,21 @@ class spesifikasi extends BaseController
         echo view('v_home', $data);
         echo view('layouts/footer');
     }
+    
     function admin()
-    {
+    {   
+        $laptop = $this->M_laptop->paginate(2 ,'laptop');
+        $brand = $this->M_brand->findAll();
         $data = [
-            'title' => "Admin"
+            'laptop' => $laptop,
+            'brand' => $brand,
+            'pemisah' => $this->M_laptop->pager,
+            'pilih' => 'all',
+            'title' => 'Admin'
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar');
-        echo view('v_admin');
+        echo view('v_admin', $data);
         echo view('layouts/footer');
     }
 }
