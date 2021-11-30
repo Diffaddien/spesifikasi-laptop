@@ -13,10 +13,10 @@ if ($jam > 3 and $jam <=9){
 
 <div class="container">
     <br/>
-    <button><a href="/logout">Logout</a></button><br/>
+    <a href="/logout"><button type="button" class="btn btn-danger btn-sm">Logout</button><br/>
     <h3><?php echo "Selamat ".$waktu.", ".$_SESSION['admin_username']; ?></h3>
     <br/>
-    <button><a href="#">Tambahkan</a></button></br><br/>
+    <a href="#"><button type="button" class="btn btn-info">Tambahkan +</button></a></br><br/>
     <table>
         <thead class="thead-light">
             <tr>
