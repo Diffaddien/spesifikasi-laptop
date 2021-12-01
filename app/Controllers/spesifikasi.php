@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\M_laptop;
 use App\Models\M_brand;
+use App\Models\ModelAdmin;
 
 class spesifikasi extends BaseController
 {
@@ -12,6 +13,7 @@ class spesifikasi extends BaseController
     {
         $this->M_laptop = new M_laptop();
         $this->M_brand = new M_brand();
+        $this->M_admin = new ModelAdmin();
     }
     public function index()
     {
@@ -33,11 +35,15 @@ class spesifikasi extends BaseController
     function admin()
     {   
         $laptop = $this->M_laptop->paginate(2 ,'laptop');
+        $totalL = $this->M_laptop->findAll();
         $brand = $this->M_brand->findAll();
+        $Admin = $this->M_admin->findAll();
         $data = [
+            'pemisah' => $this->M_laptop->pager,
             'laptop' => $laptop,
             'brand' => $brand,
-            'pemisah' => $this->M_laptop->pager,
+            'admin' => $Admin,
+            'totalL' => $totalL,
             'pilih' => 'all',
             'title' => 'Admin'
         ];
