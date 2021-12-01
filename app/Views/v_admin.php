@@ -16,7 +16,7 @@ if ($jam > 3 and $jam <=9){
 	<button type="button" class="btn btn-danger btn-sm"><a href="/logout">Logout &rarr;</a></button><br/>
     <h3><?php echo "Selamat ".$waktu.", ".$_SESSION['admin_username']; ?></h3>
     <br/>
-	<<button type="button" class="btn btn-info">a href="#">Tambahkan</a></button></a></br><br/>
+	<button type="button" class="btn btn-info"><a href="#">Tambahkan</a></button></a></br><br/>
     <table>
         <thead class="thead-light">
             <tr>
