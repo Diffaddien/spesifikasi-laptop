@@ -43,7 +43,7 @@ class Login extends BaseController
         }
         
         $data = [
-            'title' => 'Login'
+            'title' => 'home'
         ];
         echo view('layouts/header', $data);
         echo view('layouts/navbar');
