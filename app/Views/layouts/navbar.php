@@ -20,11 +20,11 @@
         <label for="check" class="menu-btn">
           <i class="fas fa-bars"></i>
         </label>
-        <a href="/" class="logo">SPEKLAPTOP</a>
+        <a href="/" class="logo"><img src="/assets/LOGO.png" height="55px"></img></a>
         <ul class="navlinks">
           <li><a href="/" class="<?= \Config\Services::request()->uri->getSegment(1) == '' ? 'active' : '' ?>">Home</a></li>
           <li><a href="/about" class="<?= \Config\Services::request()->uri->getSegment(1) == 'about' ? 'active' : '' ?>">About</a></li>
-          <li><a href="/admin" class="<?= \Config\Services::request()->uri->getSegment(1) == 'admin' ? 'active' : '' ?>">Admin</a></li>
+          <li><a href="/admin" class="<?= \Config\Services::request()->uri->getSegment(1) == 'admin' ? 'active' : '' ?>"><?= !session()->get('admin_id') ? 'Login ' : 'Admin' ?></a></li>
         </ul>
       </nav>
     </header>

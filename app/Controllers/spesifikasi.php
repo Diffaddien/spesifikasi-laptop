@@ -34,7 +34,7 @@ class spesifikasi extends BaseController
     
     function admin()
     {   
-        $laptop = $this->M_laptop->paginate(2 ,'laptop');
+        $laptop = $this->M_laptop->paginate(3 ,'laptop');
         $totalL = $this->M_laptop->findAll();
         $brand = $this->M_brand->findAll();
         $Admin = $this->M_admin->findAll();

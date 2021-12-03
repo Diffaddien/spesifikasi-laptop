@@ -23,7 +23,7 @@ class Database extends Config
      *
      * @var string
      */
-    public $defaultGroup = 'db_online';
+    public $defaultGroup = 'default';
 
     /**
      * The default database connection.
@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'laptop_data',
+        'database' => 'laptop_db',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
@@ -65,27 +65,11 @@ class Database extends Config
         'encrypt'  => false,
         'compress' => false,
         'strictOn' => false,
-        'failover' => [
-            'DSN'      => '',
-            'hostname' => 'localhost',
-            'username' => 'root',
-            'password' => '',
-            'database' => 'laptop_data',
-            'DBDriver' => 'MySQLi',
-            'DBPrefix' => '',
-            'pConnect' => false,
-            'DBDebug'  => (ENVIRONMENT !== 'production'),
-            'charset'  => 'utf8',
-            'DBCollat' => 'utf8_general_ci',
-            'swapPre'  => '',
-            'encrypt'  => false,
-            'compress' => false,
-            'strictOn' => false,
-            'failover' => [],
-            'port'     => 3306,
-        ],
+        'failover' => [],
         'port'     => 3306,
     ];
+    
+   
     
 
     /**
