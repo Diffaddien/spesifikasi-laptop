@@ -23,7 +23,7 @@ class spesifikasi extends BaseController
             'laptop' => $laptop,
             'brand' => $brand,
             'pilih' => 'all',
-            'title' => 'Home'
+            'title' => 'Detail'
         ];
 
         echo view('layouts/header', $data);
@@ -50,6 +50,19 @@ class spesifikasi extends BaseController
         echo view('layouts/header', $data);
         echo view('layouts/navbar');
         echo view('v_admin', $data);
+        echo view('layouts/footer');
+    }
+
+    public function detail($kd){ //form tambah
+        $laptop = $this->M_laptop->find($kd);
+        $data = [
+            'data' => $laptop,
+            'title' => 'Detail'
+        ];
+
+        echo view('layouts/header', $data);
+        echo view('layouts/navbar');
+        echo view('v_detail', $data);
         echo view('layouts/footer');
     }
 }

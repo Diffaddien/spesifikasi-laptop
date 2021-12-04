@@ -46,7 +46,7 @@
             <b>Storage</b>: <?=$r['disk'];?>
         </p>
 		<span class="bar_munculan" data-tooltip="Klik tanda panah untuk lihat lebih lengkap">
-		  	<a href="#"><svg class="w-6 h-6 anim" fill="none" stroke="#303030" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+		  	<a href="<?= base_url("spesifikasi/detail/".$r['laptop_id'])?>"><svg class="w-6 h-6 anim" fill="none" stroke="#303030" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
 		</span>
 		</div>
 	</div>

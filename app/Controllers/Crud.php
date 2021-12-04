@@ -20,12 +20,26 @@ class Crud extends BaseController
     }
 
     public function form_tambah(){
-        return view('CRUD/tambah');
+       
+        $data = [
+            'title' => 'Detail'
+        ];
+
+        echo view('layouts/header', $data);
+        echo view('CRUD/tambah');
+        echo view('layouts/footer');
     }
 
     public function form_ubah($kd){ //form tambah
-        $data['data']=$this->M_laptop->find($kd);
-        return view('CRUD/update', $data);
+        $laptop=$this->M_laptop->find($kd);
+        $data = [
+            'title' => 'Detail',
+            'data' => $laptop
+        ];
+
+        echo view('layouts/header', $data);
+        echo view('CRUD/update', $data);
+        echo view('layouts/footer');
     }
 
     //proses Crud nya

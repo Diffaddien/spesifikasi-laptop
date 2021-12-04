@@ -69,7 +69,8 @@ footer {
 }
 footer a{color: black;}
 
-.kotak_login {
+
+.kotak_form {
   width: 90%;
   background-color: #E3EDFF;
   background-attachment: fixed;
@@ -78,7 +79,7 @@ footer a{color: black;}
   margin: 50px auto;/*meletakkan form ke tengah*/
   padding: 30px 20px;
 }
-.tulisan_login {
+.tulisan_form {
   text-align: center;
   text-transform: uppercase;/*membuat semua huruf menjadi kapital*/
 }
@@ -99,7 +100,7 @@ input:focus {
 label {
   font-size: 11pt;
 }
-.form_login {
+.form_text {
 /*membuat lebar form penuh*/
 box-sizing: border-box;
 width: 100%;
@@ -107,7 +108,7 @@ padding: 10px;
 font-size: 11pt;
 margin-bottom: 20px;
 }
-.tombol_login {
+.tombol_submit {
   background: dodgerBlue;
   color: white;
   font-size: 11pt;
@@ -408,7 +409,10 @@ table tr:hover td {
 .pagination{ display:flex;padding:0 15px 20px 0;float:right;list-style:none}
 .page-link{ position:relative;display:block;color:#0d6efd;text-decoration:none;background-color:#fff;border:1px solid #dee2e6;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.page-link{transition:none}}.page-link:hover{z-index:2;color:#0a58ca;background-color:#e9ecef;border-color:#dee2e6}.page-link:focus{z-index:3;color:#0a58ca;background-color:#e9ecef;outline:0;box-shadow:0 0 0 .25rem rgba(13,110,253,.25)}.page-item:not(:first-child) .page-link{margin-left:-1px}.page-item.active .page-link{z-index:3;color:#fff;background-color:#0d6efd;border-color:#0d6efd}.page-item.disabled .page-link{color:#6c757d;pointer-events:none;background-color:#fff;border-color:#dee2e6}.page-link{padding:.375rem .75rem}.page-item:first-child .page-link{border-top-left-radius:.25rem;border-bottom-left-radius:.25rem}.page-item:last-child .page-link{border-top-right-radius:.25rem;border-bottom-right-radius:.25rem}.pagination-lg .page-link{padding:.75rem 1.5rem;font-size:1.25rem}.pagination-lg .page-item:first-child .page-link{border-top-left-radius:.3rem;border-bottom-left-radius:.3rem}.pagination-lg .page-item:last-child .page-link{border-top-right-radius:.3rem;border-bottom-right-radius:.3rem}.pagination-sm .page-link{padding:.25rem .5rem;font-size:.875rem}.pagination-sm .page-item:first-child .page-link{border-top-left-radius:.2rem;border-bottom-left-radius:.2rem}.pagination-sm .page-item:last-child .page-link{border-top-right-radius:.2rem;border-bottom-right-radius:.2rem}
 
-
+.infos {
+  position: relative; margin: 20px 20px;
+  line-height: 29px; padding: 0px 0px; transform: none!important;  overflow: hidden; text-overflow: clip;  white-space: nowrap;}
+.infos b{display: block;float: left;width: 30%;}
 
 /* Keyframes Animasi --------------------------------------------------------*/
 @keyframes shake {

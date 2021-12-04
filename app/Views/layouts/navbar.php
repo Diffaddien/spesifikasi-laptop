@@ -27,4 +27,4 @@
           <li><a href="/admin" class="<?= \Config\Services::request()->uri->getSegment(1) == 'admin' ? 'active' : '' ?>"><?= !session()->get('admin_id') ? 'Login ' : 'Admin' ?></a></li>
         </ul>
       </nav>
-    </header>
+</header>

@@ -1,6 +1,6 @@
 <div class="container">
-<div class="kotak_login">
-    <h2 class="tulisan_login">
+<div class="kotak_form">
+    <h2 class="tulisan_form">
         LOGIN
     </h2>
     <div class="card-body">
@@ -16,15 +16,15 @@
             <label for="inputUsername">
                     Username
             </label>
-            <input type="text" name="admin_username" class="form_login" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan Username"/>
+            <input type="text" name="admin_username" class="form_text" value="<?php echo session()->getFlashdata('admin_username') ?>" id="inputUsername" placeholder="Masukan Username"/>
             
             <label for="inputPassword">
                     Password
             </label>
-            <input type="password" name="admin_password" class="form_login" id="inputPassword" placeholder="Masukan Password">
+            <input type="password" name="admin_password" class="form_text" id="inputPassword" placeholder="Masukan Password">
             
             
-            <input type="submit" name="login" class="tombol_login" value="LOGIN" />
+            <input type="submit" name="login" class="tombol_submit" value="LOGIN" />
             
         </form>
     </div>
